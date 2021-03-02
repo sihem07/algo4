@@ -1,0 +1,15 @@
+ALGORITHM tri_insertion
+VAR
+    var,i,j:INTEGER
+    t : ARRAY_OF INTEGER[n];
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+      var := t[i];
+      j:=i-1;
+      WHILE (j>=0 and t[j]>var) DO
+          t[j+1]:= t[j];
+          j:=j-1;
+      END_WHILE  
+      t[j+1]:=var;
+    END_FOR
+END
